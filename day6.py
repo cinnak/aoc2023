@@ -43,14 +43,23 @@ def count_winning_ways(T, D):
     end = math.floor(x2)
     return end - start + 1
 
-def valid_rounds2(games):
-    result = []
-    for game in games:
-        result.append(count_winning_ways(game[0], game[1]))
-    return math.prod(result)
+
+
+
+def valid_rounds2(data):
+    times, distance = data.splitlines()
+    times = int(''.join(x for x in re.findall(r'\d+',times)))
+    distance = int(''.join(x for x in re.findall(r'\d+',distance)))
+    result=count_winning_ways(times,distance)
+    return result
+
+
 
 if __name__ == "__main__":
     data = get_data(year=2023, day=6)
-    games = deal_raw_data(data)
-    # print(valid_rounds(games))
-    print(valid_rounds2(games))
+    # part 1
+    # games = deal_raw_data(data)
+    # print()'part1':,valid_rounds(games))
+
+    # part 2
+    print('part2:',valid_rounds2(data))
