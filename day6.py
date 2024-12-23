@@ -43,17 +43,13 @@ def count_winning_ways(T, D):
     end = math.floor(x2)
     return end - start + 1
 
-
-
-
+# part 2
 def valid_rounds2(data):
     times, distance = data.splitlines()
     times = int(''.join(x for x in re.findall(r'\d+',times)))
     distance = int(''.join(x for x in re.findall(r'\d+',distance)))
     result=count_winning_ways(times,distance)
     return result
-
-
 
 if __name__ == "__main__":
     data = get_data(year=2023, day=6)
