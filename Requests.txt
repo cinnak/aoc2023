@@ -1,0 +1,6 @@
+aocd
+numpy
+itertools
+collections
+math
+re
