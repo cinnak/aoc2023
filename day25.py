@@ -42,8 +42,6 @@ def solve_day25():
     # 输出结果
     print("答案(两组大小的乘积):", result)
     
-   
-    
     return result
 
 
